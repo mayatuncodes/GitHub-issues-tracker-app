@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Custom CSS -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- Icon CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="assets/favicon.png" type="image/x-icon" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css" />
+    <title>Sign In</title>
+  </head>
+  <body class="bg-gray-100 flex items-center justify-center min-h-screen">
+    <div class="p-10 bg-[#FFFFFF] shadow-lg rounded-lg">
+      <!-- Logo -->
+      <div class="text-center mb-6">
+        <img src="assets/github-logo.png" alt="" class="mx-auto mb-3 w-20" />
+        <h1 class="text-[24px] font-semibold text-[#1F2937]">
+          GitHub Issues Tracker
+        </h1>
+        <p class="text-[16px] text-[#64748B]">Sign in to manage your issues</p>
+      </div>
+
+      <!-- FORM -->
+      <form id="loginForm">
+        <!-- Username Input -->
+        <label class="font-medium">Username</label>
+        <input
+          id="username"
+          type="text"
+          placeholder="Enter Username"
+          class="w-full border p-2 rounded-lg mt-1 mb-1"
+        />
+        <!-- Default Option -->
+        <p class="text-[#4A00FF] text-sm mb-4">Default: admin</p>
+
+        <!-- Password Input -->
+        <label class="font-medium">Password</label>
+        <input
+          id="password"
+          type="text"
+          placeholder="Enter Password"
+          class="w-full border p-2 rounded-lg mt-1 mb-1"
+        />
+
+        <!-- Default Option -->
+        <p class="text-[#4A00FF] text-sm mb-4">Default: admin123</p>
+
+        <p class="text-gray-600 text-sm mt-2 mb-6">Forgot password?</p>
+
+        <!-- SignIn button -->
+        <button
+          type="submit"
+          class="w-full text-[#FFFFFF] text-[16px] font-semibold bg-[#4A00FF] py-3 rounded-lg cursor-pointer"
+        >
+          Sign In
+        </button>
+      </form>
+
+      <!-- Success Message -->
+      <p id="successMsg" class="text-green-600 text-center mt-4 hidden">
+        Login Successful!
+      </p>
+      <!-- Demo -->
+      <p class="text-center text-gray-500 my-6">OR</p>
+      <div class="bg-gray-100 text-center p-4 rounded-lg">
+        <p class="text-gray-500 mb-2">Demo Credentials:</p>
+        <p><span class="font-semibold">Username:</span> admin</p>
+        <p><span class="font-semibold">Password:</span> admin123</p>
+      </div>
+    </div>
+    <script src="script/signin.js"></script>
+  </body>
+</html>
