@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Custom CSS -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- Icon CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="assets/favicon.png" type="image/x-icon" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Dashboard</title>
+  </head>
+  <body class="bg-gray-100">
+    <!-- Navbar -->
+    <nav class="bg-white border-b border-gray-300">
+      <div
+        class="max-w-7xl mx-auto px-4 py-3 grid grid-cols-1 sm:grid-cols-2 gap-4 items-center"
+      >
+        <!-- Logo -->
+        <div class="flex items-center gap-2 justify-center sm:justify-start">
+          <img src="assets/github-logo.png" class="w-8" />
+          <h1 class="text-xl font-semibold">GitHub Issues Tracker</h1>
+        </div>
+
+        <!-- Search -->
+        <div class="flex items-center gap-2 justify-center sm:justify-end">
+          <input
+            type="text"
+            placeholder="Search issues..."
+            class="border rounded px-3 py-2 w-40 sm:w-64"
+          />
+
+          <button class="bg-indigo-600 text-white px-4 py-2 rounded">
+            Search
+          </button>
+        </div>
+      </div>
+    </nav>
+    <!-- Main Container -->
+    <div class="max-w-7xl mx-auto p-4 space-y-4">
+      <!-- Tabs -->
+      <div class="bg-white p-4 rounded-lg">
+        <div class="flex gap-3">
+          <button class="bg-indigo-600 text-white px-4 py-2 rounded">
+            All
+          </button>
+
+          <button class="border px-4 py-2 rounded">Open</button>
+
+          <button class="border px-4 py-2 rounded">Closed</button>
+        </div>
+      </div>
+
+      <!-- Issue Header -->
+      <div
+        class="bg-white p-4 rounded-lg flex flex-col items-center sm:flex-row sm:justify-between sm:items-center gap-4 border-b border-gray-300"
+      >
+        <div class="flex gap-3 items-center">
+          <div
+            class="w-10 h-10 rounded-full bg-purple-100 flex items-center justify-center"
+          >
+            <img src="assets/Aperture.png" class="w-5" />
+          </div>
+
+          <div>
+            <h2 class="text-lg font-semibold">50 Issues</h2>
+            <p class="text-lg text-gray-500">
+              Track and manage your project issues
+            </p>
+          </div>
+        </div>
+
+        <div class="flex gap-4">
+          <div class="flex items-center gap-1">
+            <span class="w-2 h-2 bg-green-500 rounded-full"></span>
+            Open
+          </div>
+
+          <div class="flex items-center gap-1">
+            <span class="w-2 h-2 bg-purple-500 rounded-full"></span>
+            Closed
+          </div>
+        </div>
+      </div>
+
+      <!-- Issues Grid -->
+      <div
+        id="issuesContainer"
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 p-4 bg-[#FBFBFB]"
+      >
+        <!-- Card -->
+        <div
+          class="bg-white rounded-xl shadow p-5 border-t-4 border-green-500 transition duration-300 hover:-translate-y-1 hover:shadow-lg"
+        >
+          <div class="flex justify-between mb-3">
+            <div
+              class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center"
+            >
+              <img src="assets/Open-Status.png" class="w-7" />
+            </div>
+
+            <span
+              class="bg-[#FEECEC] text-[#EF4444] font-medium px-6 py-2 rounded-full"
+            >
+              HIGH
+            </span>
+          </div>
+
+          <h1 class="font-semibold text-xl mb-2">
+            Fix navigation menu on <br />
+            mobile devices
+          </h1>
+
+          <p class="text-sm text-[#64748B] mb-3">
+            Navigation menu doesn't collapse properly on mobile devices.
+          </p>
+
+          <div class="flex gap-2 mb-3">
+            <span
+              class="border border-red-300 text-[#EF4444] bg-[#FEECEC] px-4 py-2 rounded-full text-xs font-medium flex items-center gap-2"
+            >
+              <img src="assets/Vector.png" alt="" />BUG
+            </span>
+
+            <span
+              class="border border-orange-300 text-[#D97706] bg-[#FFF8DB] font-medium px-6 py-2 rounded-full text-xs flex items-center gap-2"
+            >
+              <img src="assets/Lifebuoy.png" alt="" />HELP WANTED
+            </span>
+          </div>
+
+          <hr class="border-gray-200 my-3" />
+
+          <p class="text-lgtext-[#64748B]">john_doe</p>
+
+          <p class="text-lg text-[#64748B]">1/15/2024</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
